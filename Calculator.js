@@ -20,5 +20,17 @@
                  "display": "column"
              }
          ];
-     }
+     },
+     prepareCalculator: function (calculatorConfig) {
+        return new this.lumenize.TimeSeriesCalculator({
+            deriveFieldsOnInput: calculatorConfig.derivedFieldsOnInput,
+            metrics: calculatorConfig.metrics,
+            summaryMetricsConfig: calculatorConfig.summaryMetricsConfig,
+            deriveFieldsAfterSummary: calculatorConfig.derivedFieldsAfterSummary,
+            granularity: this.lumenize.Time.MONTH,
+            tz: this.config.timeZone,
+            holidays: this.config.holidays,
+            workDays: this._getWorkdays()
+        });
+    }
  });

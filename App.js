@@ -11,11 +11,11 @@ Ext.define('DefectTrendApp', {
                 fetch: ['Name','Environment','OpenedDate','Project'],
                 hydrate: ['Environment'],
                 filters: [
-                    // {
-                    //     property: '_ProjectHierarchy',
-                    //     operator: '=',
-                    //     value: this.getContext().getProject().ObjectID
-                    // },
+                    {
+                        property: '_ProjectHierarchy',
+                        operator: '=',
+                        value: 1971104447
+                    },
                     {
                         property: '_TypeHierarchy',
                         operator: '=',
@@ -39,7 +39,6 @@ Ext.define('DefectTrendApp', {
 
             calculatorType: 'ProdVsTestCalculator',
             calculatorConfig: {
-            	granularity: 'month'
             },
 
             chartConfig: {
@@ -51,9 +50,9 @@ Ext.define('DefectTrendApp', {
                 },
                 xAxis: {
                     tickmarkPlacement: 'on',
-                    tickInterval: 20,
+                    tickInterval: 2,
                     title: {
-                        text: 'Days'
+                        text: 'Month'
                     }
                 },
                 yAxis: [
