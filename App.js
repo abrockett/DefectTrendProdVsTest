@@ -8,7 +8,7 @@ Ext.define('DefectTrendApp', {
             xtype: 'rallychart',
 
             storeConfig: {
-                fetch: ['Name','Environment','OpenedDate','Project'],
+                fetch: ['Name','Environment','OpenedDate','Project','CreationDate'],
                 hydrate: ['Environment'],
                 filters: [
                     {

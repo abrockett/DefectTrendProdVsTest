@@ -27,7 +27,7 @@
             metrics: calculatorConfig.metrics,
             summaryMetricsConfig: calculatorConfig.summaryMetricsConfig,
             deriveFieldsAfterSummary: calculatorConfig.derivedFieldsAfterSummary,
-            granularity: this.lumenize.Time.MONTH,
+            granularity: this.lumenize.Time.DAY,
             tz: this.config.timeZone,
             holidays: this.config.holidays,
             workDays: this._getWorkdays()
